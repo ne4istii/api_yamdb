@@ -1,13 +1,9 @@
-from api_yamdb import settings
-
 from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-
 from django_filters.rest_framework import DjangoFilterBackend
-
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin,
@@ -27,6 +23,7 @@ from .serializers import (CategorieSerializer, CommentSerializer,
                           GenreSerializer, MyTokenObtainPairSerializer,
                           RegisterSerializer, ReviewSerializer,
                           TitleReadSerializer, TitleSerializer, UserSerializer)
+from api_yamdb import settings
 
 User = get_user_model()
 
