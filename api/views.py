@@ -21,11 +21,9 @@ from .filters import TitlesFilter
 from .models import Category, Genre, Review, Title
 from .pagination import YamPagination
 from .permissions import IsAdmin, IsAnonymous, IsAuthenticatedOrAuthor, IsMe
-from .serializers import (
-    CategorieSerializer, CommentSerializer, GenreSerializer, 
-    MyTokenObtainPairSerializer, RegisterSerializer, ReviewSerializer,
-    TitleReadSerializer, TitleSerializer, UserSerializer
-)
+from .serializers import (CategorieSerializer, CommentSerializer, 
+    GenreSerializer, MyTokenObtainPairSerializer, RegisterSerializer, 
+    ReviewSerializer, TitleReadSerializer, TitleSerializer, UserSerializer)
 
 User = get_user_model()
 
