@@ -4,15 +4,14 @@ from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework_simplejwt.views import TokenViewBase
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin,
                                    ListModelMixin)
-from rest_framework.permissions import AllowAny, SAFE_METHODS
 from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import AllowAny, SAFE_METHODS
 from rest_framework.response import Response
-from rest_framework.viewsets import ModelViewSet
+from rest_framework_simplejwt.views import TokenViewBase
 
 from api_yamdb import settings
 from .filters import TitlesFilter
@@ -40,7 +39,7 @@ class MyTokenObtainPairView(TokenViewBase):
     serializer_class = MyTokenObtainPairSerializer
 
 
-class UsersViewSet(ModelViewSet):
+class UsersViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsMe | IsAdmin]
@@ -62,7 +61,7 @@ class UsersViewSet(ModelViewSet):
         return Response(serializer.data)
 
 
-class RegisterUserView(ModelViewSet):
+class RegisterUserView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
     permission_classes = (AllowAny,)
