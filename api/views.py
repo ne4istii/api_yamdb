@@ -6,14 +6,19 @@ from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
-from rest_framework.mixins import CreateModelMixin, DestroyModelMixin, ListModelMixin
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, SAFE_METHODS
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.views import TokenViewBase
+from rest_framework.mixins import (
+    CreateModelMixin, 
+    DestroyModelMixin, 
+    ListModelMixin
+)
 
 from api_yamdb import settings
+
 from .filters import TitlesFilter
 from .models import Category, Genre, Review, Title
 from .pagination import YamPagination
