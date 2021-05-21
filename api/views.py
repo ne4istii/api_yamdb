@@ -12,9 +12,7 @@ from rest_framework.permissions import AllowAny, SAFE_METHODS
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.views import TokenViewBase
 from rest_framework.mixins import (
-    CreateModelMixin, 
-    DestroyModelMixin, 
-    ListModelMixin
+    CreateModelMixin, DestroyModelMixin, ListModelMixin
 )
 
 from api_yamdb import settings
