@@ -4,7 +4,6 @@ from django.contrib.admin.sites import AlreadyRegistered
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
-
 User = get_user_model()
 
 
