@@ -7,9 +7,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.mixins import (
-    CreateModelMixin, DestroyModelMixin, ListModelMixin
-)
+from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin, 
+                                   ListModelMixin)
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, SAFE_METHODS
 from rest_framework.viewsets import ModelViewSet
@@ -22,8 +21,9 @@ from .models import Category, Genre, Review, Title
 from .pagination import YamPagination
 from .permissions import IsAdmin, IsAnonymous, IsAuthenticatedOrAuthor, IsMe
 from .serializers import (CategorieSerializer, CommentSerializer, 
-    GenreSerializer, MyTokenObtainPairSerializer, RegisterSerializer, 
-    ReviewSerializer, TitleReadSerializer, TitleSerializer, UserSerializer)
+                          GenreSerializer, MyTokenObtainPairSerializer, 
+                          RegisterSerializer, ReviewSerializer, 
+                          TitleReadSerializer, TitleSerializer, UserSerializer)
 
 User = get_user_model()
 
