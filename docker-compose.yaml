@@ -1,10 +1,8 @@
 version: '3.7'
 
 services:
-  ne4istii:
-    depends_on:
-      - nginx
-    image: ne4istii/yamdb_final:latest
+  # ne4istii:
+  #   image: ne4istii/yamdb_final:latest
 
   db:
     image: postgres:latest
