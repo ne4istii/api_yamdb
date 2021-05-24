@@ -1,8 +1,6 @@
 version: '3.7'
 
 services:
-  # ne4istii:
-  #   image: ne4istii/yamdb_final:latest
 
   db:
     image: postgres:latest
