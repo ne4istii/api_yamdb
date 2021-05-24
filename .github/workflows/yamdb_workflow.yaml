@@ -57,10 +57,9 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
           stack_file_name: docker-compose.yaml
           script: |
-            sudo docker <имя-пользователя>/<имя-репозитория>
+            sudo docker ne4istii/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
             # Создаст файл для переменных окружения
