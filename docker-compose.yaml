@@ -1,6 +1,9 @@
 version: '3.7'
 
 services:
+  yamdb_final:
+    build: .
+    image: ne4istii/yamdb_final:latest  # goes to your repository on Docker Hub
 
   db:
     image: postgres:latest
