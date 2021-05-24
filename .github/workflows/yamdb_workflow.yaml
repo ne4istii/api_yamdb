@@ -61,8 +61,6 @@ jobs:
           stack_file_name: docker-compose.yaml
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
-            sudo docker-compose stop
-            sudo docker-compose rm web
             # Создаст файл для переменных окружения
             touch .env
             # Наполнит файл переменными окружения из секретов GitHub
