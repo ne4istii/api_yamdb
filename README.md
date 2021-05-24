@@ -1,4 +1,4 @@
 # yamdb_final
 yamdb_final
 
-![Django-app workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![yamdb_workflow Actions Status](https://github.com/ne4istii/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
