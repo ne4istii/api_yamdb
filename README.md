@@ -3,13 +3,13 @@
 
 # Стек технологий
 Автоматизация и тестирование:
-    - github actions, pytest
+- github actions, pytest
 Сборка и хранение:
-    - docker, docker-compose, docker-hub
+- docker, docker-compose, docker-hub
 Хостинг:
-    - Яндекс Облако
+- Яндекс Облако
 Оповещение:
-    - Telegram API
+- Telegram API
 Контейнеры:
 1. Web:
     - Python + Django REST Framework
@@ -25,22 +25,22 @@
 git clone https://github.com/ne4istii/yamdb_final.git
 ```
 2. Подготовить удаленный сервер для работы:
-    2.1. Установите docker:
-    ```sh
-    sudo apt install docker.io 
-    ```
-    2.2. Установите [docker-compose](https://docs.docker.com/compose/install/):
-    ```sh
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
-    ```
-    2.3. Скопируйте подготовленные файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно.
-    2.4. Добавьте в Secrets GitHub Actions переменные окружения
+- Установите docker:
+```sh
+sudo apt install docker.io 
+```
+- Установите [docker-compose](https://docs.docker.com/compose/install/):
+```sh
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+- Скопируйте подготовленные файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно.
+- Добавьте в Secrets GitHub Actions переменные окружения
 3. При пуше в ветку main код автоматически деплоится на сервер
 
 # Доступ к проекту
-Полная документация проекта (redoc.yaml) доступна по адресу: http://84.252.137.223/redoc/
-Доступ в админку проекта: http://84.252.137.223/admin/
-Автор: [ne4istii](https://github.com/ne4istii)
+- Полная документация проекта (redoc.yaml) доступна по адресу: http://84.252.137.223/redoc/
+- Доступ в админку проекта: http://84.252.137.223/admin/
+- Автор: [ne4istii](https://github.com/ne4istii)
 
 ![yamdb_workflow Actions Status](https://github.com/ne4istii/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
